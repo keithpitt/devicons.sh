@@ -1,1 +1,3 @@
-magick mise-trim.png -background transparent -resize 400x400 -gravity center -extent 400x400  mise-trim-smaller.png
+set -x
+magick "$1" -background transparent -resize 300x300 -gravity center -extent 300x300  "$1"-resized.png
+ascii-silhouettify -i "$1"-resized.png
