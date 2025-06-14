@@ -4,7 +4,7 @@
 </p>
 </h1>
 <p align="center">
-Beautiful images for your terminal
+Beautiful (and useful!) ANSI artwork for your terminal.
 </p>
 
 # clipart.sh
