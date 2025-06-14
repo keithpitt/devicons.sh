@@ -6,5 +6,13 @@ stdlib::import "file/pathrewrite"
 in="$1"
 out="$(pathrewrite --basename "%s-resized" "$in")"
 
-magick "$in" -background transparent -resize 300x300 -gravity center -extent 400x400 "$out"
+size="$2x${3:-$2}"
+
+magick "$in" \
+  -background transparent \
+  -resize "$size" \
+  -gravity center \
+  -extent "$size" \
+  "$out"
+
 open "$out"
